@@ -1,6 +1,6 @@
 {
   "name": "@byteink/mppjs",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Convert Microsoft Project (.mpp) files to XML from Node, Bun, or Deno. Native binary, no JVM required.",
   "keywords": [
     "microsoft-project",
