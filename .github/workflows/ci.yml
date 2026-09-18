@@ -42,16 +42,21 @@ jobs:
 
       - name: Compile TS
         run: |
-          npm install
+          npm ci
           npm run build:ts
 
       - name: Clone MPXJ samples
-        run: git clone --depth 1 https://github.com/joniles/mpxj /tmp/mpxj
+        run: |
+          git init /tmp/mpxj
+          git -C /tmp/mpxj remote add origin https://github.com/joniles/mpxj.git
+          git -C /tmp/mpxj fetch --depth 1 origin c5e1320cde0acd404031495aa66c17639a57239b
+          git -C /tmp/mpxj checkout --detach FETCH_HEAD
 
       - name: Run tests
         env:
           # Test the binary this job just built, not a published sidecar pulled in by npm install.
           MPPJS_BINARY: ${{ github.workspace }}/bin/mpxj-convert
+          MPXJ_SAMPLES: /tmp/mpxj/junit/data
         run: bun test test/
 
       # The runner has a JDK (it just built with GraalVM), so it cannot catch a

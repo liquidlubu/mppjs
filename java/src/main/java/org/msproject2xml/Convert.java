@@ -41,7 +41,9 @@ public final class Convert {
                 System.err.println("Unsupported or unreadable input format: " + args[0]);
                 System.exit(1);
             }
-            new MSPDIWriter().write(project, output);
+            MSPDIWriter writer = new MSPDIWriter();
+            writer.setWriteTimephasedData(true);
+            writer.write(project, output);
         } catch (Exception e) {
             System.err.println("Conversion failed: " + e.getMessage());
             System.exit(1);

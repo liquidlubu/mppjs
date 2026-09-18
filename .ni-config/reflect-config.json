@@ -36,6 +36,9 @@
   "name":"[Lorg.mpxj.RecurrenceType;"
 },
 {
+  "name":"[Lorg.mpxj.RelationType;"
+},
+{
   "name":"[Lorg.mpxj.ResourceRequestType;"
 },
 {
@@ -265,6 +268,18 @@
 },
 {
   "name":"org.mpxj.mspdi.schema.Adapter30",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"org.mpxj.mspdi.schema.Adapter31",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"org.mpxj.mspdi.schema.Adapter32",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"org.mpxj.mspdi.schema.Adapter33",
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
